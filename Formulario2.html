@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario html</title>
+    </head>
+
+    <body>
+        <p>Formulário</th>
+        <table border="1">
+            <tr>
+                <td colspan="100%">
+                    CADASTRO DE CLIENTES
+                </td>
+            </tr>
+            
+            <td>
+                NOME
+            </td>
+                <td>
+                    <input type="text" name="NOME" id="nomeid">
+                </td>
+            <tr>
+                <td>
+                    CEP 
+                </td>
+                <td>
+                    <input type="text" name="CEP" id="cepid">
+                </td>
+            </tr>
+                <td>
+                    ENDEREÇO 
+                </td>
+                <td>
+                    <input type="text" name="ENDEREÇO" id="endereçoid">
+                </td>
+            <tr>
+                <td>
+                    TELEFONE 
+                </td>
+                    <td>
+                        <input type="text" name="TELEFONE" id="telefoneid">
+                    </td>
+            </tr>
+        </table>
+        <input type="button" onclick="fnValidarCampos('nomeid')" value="Enviar">
+        <a href="#" onclick="fnValidarCampos('cpf')"> Enviar por validacao por</a>
+
+        <script language="Javascript">
+            function ValidacaoEmail(field){
+            usuario = field.value.substring(0,field.value.indexOF("@"))
+            dominio = field.value.substring(field.value.indexOF("@")+1,field.value.lenth)
+            alert(usuario);
+            alert(dominio);
+
+            if (usuario.length>=1) &&
+                (dominio.length>=3) &&
+                (usuario.search("@")==-1)&&
+                (usuario.search("@")==-1)&&
+                (usuario.search("")==-1)&&
+                (dominio.search("")==-1)&&
+                (dominio.search("")!=-1)&&
+                (dominio.search("")>=1)&&
+                (dominio.lastIndexOF(".") < dominio.length - 1) {
+            document.getElementById("mgsemail").innerHTML="E-mail válido";
+            alert("E-mail válido");
+                }
+            else{
+            document.getElementById("msgemail").innerHTML="<front color='red"> E-mail inválido
+            }
+            }
+            function fnValidarCampos(){
+
+                if(document.getElementById("nomeid").value==1){
+                    alert("Campo NOME obrigatório")
+                }
+
+                if(document.getElementById("cepid").value==1){
+                }
+
+                if(document.getElementById("endereçoid").value==1){
+                }
+
+                if(document.getElementById("telefoneid").value==1){
+                }
+            }
+        </script>
+    </body>
+</html>
+
+
